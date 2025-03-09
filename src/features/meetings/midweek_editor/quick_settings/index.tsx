@@ -9,6 +9,7 @@ import Divider from '@components/divider';
 import MidweekExactDate from '@features/congregation/settings/meeting_forms/midweek_exact_date';
 import QuickSettings from '@features/quick_settings';
 import Typography from '@components/typography';
+import LinkPrayerSelector from '@features/meetings/link_prayer_selector';
 
 const QuickSettingsMidweekMeeting = ({
   onClose,
@@ -35,11 +36,18 @@ const QuickSettingsMidweekMeeting = ({
           <AuxiliaryClassroom />
         </Stack>
 
+        {/* TODO: ADD HERE THE UI */}
         <Stack spacing="16px">
           <Typography className="body-small-semibold" color="var(--grey-400)">
             {t('tr_assignmentPreferences')}
           </Typography>
           <AssignmentPreferences />
+        </Stack>
+        <Stack spacing="16px">
+          <Typography className="body-small-semibold" color="var(--grey-400)">
+            {t('tr_linkedParts')}
+          </Typography>
+          <LinkPrayerSelector />
         </Stack>
       </Stack>
     </QuickSettings>
