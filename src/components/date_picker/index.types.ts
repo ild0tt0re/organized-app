@@ -1,3 +1,5 @@
+import { SxProps, Theme } from '@mui/material';
+
 /**
  * Type representing the view options for the custom date picker.
  */
@@ -61,4 +63,6 @@ export interface CustomDatePickerProps {
   readOnly?: boolean;
 
   hideNav?: boolean;
+
+  sx?: SxProps<Theme>;
 }
