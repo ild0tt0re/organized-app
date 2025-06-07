@@ -59,6 +59,9 @@ const ApplicationDetails = lazy(
 const UpcomingEvents = lazy(
   () => import('@pages/congregation/upcoming_events')
 );
+const FieldServiceMeetings = lazy(
+  () => import('@pages/congregation/field_service_meetings')
+);
 
 const queryClient = new QueryClient();
 
@@ -105,6 +108,15 @@ const App = ({ updatePwa }: { updatePwa: VoidFunction }) => {
                 {
                   path: '/activities/upcoming-events',
                   element: <UpcomingEvents />,
+                },
+              ],
+            },
+            {
+              element: <RouteProtected allowed={isPublisher} />,
+              children: [
+                {
+                  path: '/activities/field-service-meetings',
+                  element: <FieldServiceMeetings />,
                 },
               ],
             },
